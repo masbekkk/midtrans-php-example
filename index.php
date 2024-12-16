@@ -23,7 +23,7 @@ if (file_exists(__DIR__ . '/.env')) {
 \Midtrans\Config::$serverKey = getenv("MIDTRANS_SERVER_KEY");
 
 // Set to Development/Sandbox mode or Production mode
-\Midtrans\Config::$isProduction = false; // Change to `true` for production
+\Midtrans\Config::$isProduction = getenv("MIDTRANS_IS_PRODUCTION"); // Change to `true` for production
 \Midtrans\Config::$isSanitized = true;
 \Midtrans\Config::$is3ds = true;
 
